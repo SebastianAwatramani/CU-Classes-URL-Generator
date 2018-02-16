@@ -1,0 +1,59 @@
+	a {
+		display: block;
+	}
+	header {
+		background-color: #231f20;
+		height: 144px;
+		width: 100%;
+	}
+	h1 {
+		font-family: Helvetica, Arial, Sans-serif;
+		font-weight: bold;
+		font-size: 25px;
+		padding: 20px 0px;
+	}
+
+	body {
+		width:100%;
+		position: relative;
+
+	}
+	wrapper {
+		width: 80%;
+		margin-left: 100px;
+		display: block;
+	}
+
+	/*Copied to clipboard tooltip*/
+
+	div#tooltip {
+		position: fixed;
+		bottom: 10px;
+		left: 0;
+		background-color: black;
+		opacity: 1.0;
+		border-radius: 0px 10px 10px 0px;
+	}
+	div#tooltip p {
+		font-family: Helvetica, Arial, Sans-serif;
+		margin: 0 auto;
+		color: #CFB87C;;
+		padding: 5px 15px 5px 10px;
+
+	}
+
+	@keyframes fadeout {
+		0% {opacity: 1;}
+		25% {opacity: .75;}
+		50% {opacity: .5;}
+		75% {display: none;}
+	}
+	#urlText, #urlAnchor {
+		font-family: Helvetica, Arial, Sans-serif;
+		font-size: 20px;
+		margin-top: 15px;
+		display: inline-block;
+	}
+	#urlResult {
+		display: block;
+	}
