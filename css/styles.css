@@ -1,59 +1,109 @@
-	a {
-		display: block;
+/*Main Styles	*/
+a {
+	    display: block;
 	}
+
 	header {
-		background-color: #231f20;
-		height: 144px;
-		width: 100%;
+	    background-color: #231f20;
+	    height: 144px;
+	    width: 100%;
 	}
+
 	h1 {
-		font-family: Helvetica, Arial, Sans-serif;
-		font-weight: bold;
-		font-size: 25px;
-		padding: 20px 0px;
+	    font-family: Helvetica, Arial, Sans-serif;
+	    font-weight: bold;
+	    font-size: 18px;
+	    padding: 20px 0px;
+	    text-align: center;
+	    color: white;
 	}
 
 	body {
-		width:100%;
-		position: relative;
+	    width: 100%;
+	    height: 100%;
+	    background-image: url("../images/background1.jpg");
+	    position: relative;
+	    overflow: hidden;
 
 	}
+
 	wrapper {
-		width: 80%;
-		margin-left: 100px;
-		display: block;
+	    width: 100%;
+	    display: block;
+	    overflow: hidden;
 	}
 
-	/*Copied to clipboard tooltip*/
+/*Copied to clipboard tooltip*/
 
 	div#tooltip {
-		position: fixed;
-		bottom: 10px;
-		left: 0;
-		background-color: black;
-		opacity: 1.0;
-		border-radius: 0px 10px 10px 0px;
+	    position: fixed;
+	    bottom: 10px;
+	    left: 0;
+	    background-color: black;
+	    opacity: 1.0;
+	    border-radius: 0px 10px 10px 0px;
 	}
+
 	div#tooltip p {
-		font-family: Helvetica, Arial, Sans-serif;
-		margin: 0 auto;
-		color: #CFB87C;;
-		padding: 5px 15px 5px 10px;
+	    font-family: Helvetica, Arial, Sans-serif;
+	    margin: 0 auto;
+	    color: #CFB87C;
+	    ;
+	    padding: 5px 15px 5px 10px;
 
 	}
 
 	@keyframes fadeout {
-		0% {opacity: 1;}
-		25% {opacity: .75;}
-		50% {opacity: .5;}
-		75% {display: none;}
+	    0% {
+	        opacity: 1;
+	    }
+	    25% {
+	        opacity: .75;
+	    }
+	    50% {
+	        opacity: .5;
+	    }
+	    75% {
+	        display: none;
+	    }
 	}
-	#urlText, #urlAnchor {
-		font-family: Helvetica, Arial, Sans-serif;
-		font-size: 20px;
-		margin-top: 15px;
-		display: inline-block;
+
+/*Generated URL Styles*/
+	#urlText,
+	#urlAnchor {
+	    font-family: Helvetica, Arial, Sans-serif;
+	    font-size: 18px;
+	    margin: 15px 0 0 9px;
+	    display: inline-block;
 	}
+
 	#urlResult {
-		display: block;
+	    display: block;
+	}
+
+	#urlResult a:hover,
+	#urlResult a:visited,
+	#urlResult a:link {
+	    color: #cfb87c;
+	    text-decoration: none;
+	}
+
+	/*Form Styles*/
+
+	form {
+	    width: 300px;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, .6);
+	    padding: 30px 25px;
+	}
+
+
+	select {
+	    width: 269px;
+	    margin: 10px auto;
+        display: block;
+	}
+/*Lines the reset button up with the selects*/
+	#reset { 
+	    margin-left: 15px;
 	}

@@ -1,224 +1,278 @@
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Class Search URL Generator</title>
-	<meta name="description" content="CU Classes Search URL Generator">
-	<meta name="author" content="Sebastian Awatramani">
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<script type="text/javascript" src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.16/dist/clipboard.min.js"></script>
-	<base target="_blank">
+    <meta charset="utf-8">
+    <title>Class Search URL Generator</title>
+    <meta name="description" content="CU Classes Search URL Generator">
+    <meta name="author" content="Sebastian Awatramani">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.16/dist/clipboard.min.js"></script>
+    <base target="_blank">
 </head>
+
 <body>
-	<header>
-		<img src="images/boulder-one-line.png">
-	</header>
-	<wrapper>
-	<h1>Class Search URL Generator</h1>
-	<form id="urloptions">
-		<select id="camp">
-			<option value="">Any Campus</option>
-			<option value="BLDR">Boulder Main Campus</option>
-			<option value="CEPS">Boulder Continuing Education</option>
-		</select>
-		<select id="srcdb">
-		<option value="">Any Term</option>
-			<option value="2181">Spring 2018</option>
-			<option value="2177">Fall 2017</option>
-			<option value="2184">Summer 2018 (Cart available March 2018)</option>
-			<option value="9999">Full 2017-2018</option>
-		</select>
-		<select id='subject'>
-			<option value="">Any Subject</option>
-			<option value="ATLS">ATLAS (ATLS)</option>
-			<option value="ACCT">Accounting (ACCT)</option>
-			<option value="APRD">Advertising, PR, Media Design (APRD)</option>
-			<option value="ASEN">Aerospace Engineering (ASEN)</option>
-			<option value="AIRR">Air Force Aerospace Studies (AIRR)</option>
-			<option value="ANTH">Anthropology (ANTH)</option>
-			<option value="APPM">Applied Math (APPM)</option>
-			<option value="ARAB">Arabic (ARAB)</option>
-			<option value="AREN">Architectural Engineering (AREN)</option>
-			<option value="ARCH">Architecture (ARCH)</option>
-			<option value="ARTF">Art Film Studies (ARTF)</option>
-			<option value="ARTH">Art History (ARTH)</option>
-			<option value="ARTS">Art Studio and Non-Studio (ARTS)</option>
-			<option value="ARSC">Arts &amp; Sciences Courses (ARSC)</option>
-			<option value="ASIA">Asian Studies (ASIA)</option>
-			<option value="ASTR">Astrophysical &amp; Planetary Sci (ASTR)</option>
-			<option value="ATOC">Atmospheric &amp; Oceanic Sciences (ATOC)</option>
-			<option value="BASE">BCOR Applied Semester Exper (BASE)</option>
-			<option value="BAKR">Baker Residential Acad Prgm (BAKR)</option>
-			<option value="BMEN">Biomedical Engineering (BMEN)</option>
-			<option value="BADM">Business Administration (BADM)</option>
-			<option value="BCOR">Business Core (BCOR)</option>
-			<option value="BPOL">Business Environment &amp; Policy (BPOL)</option>
-			<option value="BSLW">Business Law (BSLW)</option>
-			<option value="BUSM">Business Minor (BUSM)</option>
-			<option value="CSVC">Career Services (CSVC)</option>
-			<option value="CWCV">Center for Western Civilizatio (CWCV)</option>
-			<option value="CAMW">Center of the American West (CAMW)</option>
-			<option value="CEES">Central &amp; East European Stdy (CEES)</option>
-			<option value="CHEN">Chemical Engineering (CHEN)</option>
-			<option value="CHEM">Chemistry (CHEM)</option>
-			<option value="CHIN">Chinese (CHIN)</option>
-			<option value="CVEN">Civil Engineering (CVEN)</option>
-			<option value="GREK">Classical Greek Language (GREK)</option>
-			<option value="CLAS">Classics (CLAS)</option>
-			<option value="COEN">Coll of Engineerng&amp;App Sci Adm (COEN)</option>
-			<option value="CMCI">Coll of Media,Commncation,Info (CMCI)</option>
-			<option value="COMM">Communication (COMM)</option>
-			<option value="COMR">Communication Res Acad Prgm (COMR)</option>
-			<option value="COML">Comparative Literature (COML)</option>
-			<option value="CSCI">Computer Science (CSCI)</option>
-			<option value="CNCR">Concurrent Placeholder (CNCR)</option>
-			<option value="CMDP">Critical Media Practices (CMDP)</option>
-			<option value="CESR">Curr Emphasis in Soc Respnsbly (CESR)</option>
-			<option value="DNCE">Dance (DNCE)</option>
-			<option value="DANE">Danish (DANE)</option>
-			<option value="EALC">East Asian Langs &amp; Civilzatns (EALC)</option>
-			<option value="EBIO">Ecology &amp; Evolutionary Biology (EBIO)</option>
-			<option value="ECON">Economics (ECON)</option>
-			<option value="EDUC">Education (EDUC)</option>
-			<option value="ECEN">Electrical &amp; Computer Engr (ECEN)</option>
-			<option value="ENEN">Energy Engineering (ENEN)</option>
-			<option value="EHON">Engineering Honors (EHON)</option>
-			<option value="EMEN">Engineering Management (EMEN)</option>
-			<option value="ENGL">English (ENGL)</option>
-			<option value="ESLG">English as a Second Language (ESLG)</option>
-			<option value="EDEN">Engr for Developng Communities (EDEN)</option>
-			<option value="ESBM">Entrepren &amp; Small Bus Mgmt (ESBM)</option>
-			<option value="ENST">Environment and Sustainability (ENST)</option>
-			<option value="ENVD">Environmental Design (ENVD)</option>
-			<option value="EVEN">Environmental Engineering (EVEN)</option>
-			<option value="ENVS">Environmental Studies (ENVS)</option>
-			<option value="ETHN">Ethnic Studies (ETHN)</option>
-			<option value="TDXD">Experience Design (TDXD)</option>
-			<option value="FARR">Farrand Residential Acad Prgm (FARR)</option>
-			<option value="FRSI">Farsi (FRSI)</option>
-			<option value="FILM">Film Studies (FILM)</option>
-			<option value="FNCE">Finance (FNCE)</option>
-			<option value="FINN">Finnish (FINN)</option>
-			<option value="FYSM">First Year Seminar (FYSM)</option>
-			<option value="FREN">French (FREN)</option>
-			<option value="GEEN">General Engineering (GEEN)</option>
-			<option value="GEOG">Geography (GEOG)</option>
-			<option value="GEOL">Geological Sciences (GEOL)</option>
-			<option value="GRMN">German (GRMN)</option>
-			<option value="GSLL">Germanic &amp; Slavic Lang &amp; Lit (GSLL)</option>
-			<option value="GRTE">Graduate Teacher Education (GRTE)</option>
-			<option value="HEBR">Hebrew (HEBR)</option>
-			<option value="HIND">Hindi/Urdu (HIND)</option>
-			<option value="HIST">History (HIST)</option>
-			<option value="HONR">Honors (HONR)</option>
-			<option value="HUMN">Humanities (HUMN)</option>
-			<option value="HUEN">Humanities for Engineers (HUEN)</option>
-			<option value="INVS">INVST Community Studies (INVS)</option>
-			<option value="INFO">Information Science (INFO)</option>
-			<option value="IPHY">Integrative Physiology (IPHY)</option>
-			<option value="IAFS">International Affairs (IAFS)</option>
-			<option value="INBU">International Business Cert (INBU)</option>
-			<option value="IAWP">Intrmedia Art,Wrtg,Performance (IAWP)</option>
-			<option value="ITAL">Italian (ITAL)</option>
-			<option value="JPNS">Japanese (JPNS)</option>
-			<option value="JWST">Jewish Studies (JWST)</option>
-			<option value="JRNL">Journalism (JRNL)</option>
-			<option value="KREN">Korean (KREN)</option>
-			<option value="LGTC">Language Technology (LGTC)</option>
-			<option value="LATN">Latin Language (LATN)</option>
-			<option value="LAWS">Law School (LAWS)</option>
-			<option value="LEAD">Leadership Minor (LEAD)</option>
-			<option value="LDSP">Leadership Res Acad Prgrm (LDSP)</option>
-			<option value="LGBT">Lesbn/Gay/Bisexual Stdys (LGBT)</option>
-			<option value="LIBB">Libby Residential Acad Prgm (LIBB)</option>
-			<option value="LIBR">Libraries (LIBR)</option>
-			<option value="LING">Linguistics (LING)</option>
-			<option value="MBAX">MBA Advanced Electives (MBAX)</option>
-			<option value="MBAC">MBA Core (MBAC)</option>
-			<option value="MSBC">MS Business Core (MSBC)</option>
-			<option value="MSBX">MS Business Electives (MSBX)</option>
-			<option value="MGMT">Management (MGMT)</option>
-			<option value="MKTG">Marketing (MKTG)</option>
-			<option value="ENVM">Master of the Environment (ENVM)</option>
-			<option value="MSEN">Materials Science&amp;Engineering (MSEN)</option>
-			<option value="MATH">Mathematics (MATH)</option>
-			<option value="MCEN">Mechanical Engineering (MCEN)</option>
-			<option value="MDRP">Media Research and Practice (MDRP)</option>
-			<option value="MDST">Media Studies (MDST)</option>
-			<option value="MEMS">Medieval &amp; Early Modern Stdys (MEMS)</option>
-			<option value="MILR">Military Science (MILR)</option>
-			<option value="MCDB">Molecular Cell &amp; Dev Biology (MCDB)</option>
-			<option value="MUSM">Museum (MUSM)</option>
-			<option value="MUSC">Music (MUSC)</option>
-			<option value="MUEL">Music Electives (MUEL)</option>
-			<option value="EMUS">Music Ensemble (EMUS)</option>
-			<option value="NAVR">Naval Science (NAVR)</option>
-			<option value="NRSC">Neuroscience (NRSC)</option>
-			<option value="NCBE">Non-credit Business Education (NCBE)</option>
-			<option value="NCEN">Non-credit Engineering (NCEN)</option>
-			<option value="NCIE">Non-credit Internat'l English (NCIE)</option>
-			<option value="NRLN">Norlin Scholars (NRLN)</option>
-			<option value="OPIM">Operations &amp; Information MGMT (OPIM)</option>
-			<option value="ORMG">Organization Management (ORMG)</option>
-			<option value="ORGL">Organizational Leadership (ORGL)</option>
-			<option value="PACS">Peace &amp; Conflict Studies (PACS)</option>
-			<option value="PMUS">Performance Music (PMUS)</option>
-			<option value="PHIL">Philosophy (PHIL)</option>
-			<option value="PHYS">Physics (PHYS)</option>
-			<option value="PSCI">Political Science (PSCI)</option>
-			<option value="PORT">Portuguese (PORT)</option>
-			<option value="PRLC">Presidents Leadership Class (PRLC)</option>
-			<option value="PSYC">Psychology (PSYC)</option>
-			<option value="REAL">Real Estate (REAL)</option>
-			<option value="RCPR">Reciprocal Exchange (RCPR)</option>
-			<option value="RLST">Religious Studies (RLST)</option>
-			<option value="RUSS">Russian (RUSS)</option>
-			<option value="SNSK">Sanskrit (SNSK)</option>
-			<option value="SCAN">Scandinavian (SCAN)</option>
-			<option value="SEWL">Sewall Residential Acad Prgm (SEWL)</option>
-			<option value="SOCY">Sociology (SOCY)</option>
-			<option value="SPAN">Spanish (SPAN)</option>
-			<option value="SLHS">Speech, Language &amp; Hearing Sci (SLHS)</option>
-			<option value="STDY">Study Abroad (STDY)</option>
-			<option value="SUST">Sustainability by Design RAP (SUST)</option>
-			<option value="SSIR">Sustainablty&amp;Soc Innovtn  RAP (SSIR)</option>
-			<option value="SWED">Swedish (SWED)</option>
-			<option value="TLEN">Telecommunications (TLEN)</option>
-			<option value="THTR">Theatre (THTR)</option>
-			<option value="TMUS">Thesis Music (TMUS)</option>
-			<option value="WGST">Women and Gender Studies (WGST)</option>
-			<option value="WRTG">Writing and Rhetoric (WRTG)</option>
-		</select>
-		<select id="career">
-			<option value="">Any Career</option>
-			<option value="GRAD">Graduate</option>
-			<option value="LAW">Law</option>
-			<option value="NOCR">Non-Credit</option>
-			<option value="UGRD">Undergraduate</option>
-		</select>
-		<select id="arsc">
-            <option value="">A&amp;S Core Attribute</option>
-            <option value="arsc_AS">A&amp;S Core&#58; Contemporary Societies</option>
-            <option value="arsc_AF">A&amp;S Core&#58; Foreign Language</option>
-            <option value="arsc_AH">A&amp;S Core&#58; Historical Context</option>
-            <option value="arsc_AD">A&amp;S Core&#58; Human Diversity</option>
-            <option value="arsc_AI">A&amp;S Core&#58; Ideals & Values</option>
-            <option value="arsc_AL">A&amp;S Core&#58; Literature and the Arts</option>
-            <option value="arsc_AX">A&amp;S Core&#58; Natural Science Sequence</option>
-            <option value="arsc_AY">A&amp;S Core&#58; Natural Sci Non-Sequence</option>
-            <option value="arsc_AZ">A&amp;S Core&#58; Natural Science Lab</option>             
-            <option value="arsc_AQ">A&amp;S Core&#58; Quantitative Reasoning</option>                        
-            <option value="arsc_AU">A&amp;S Core&#58; United States Context</option>
-            <option value="arsc_AW">A&amp;S Core&#58; Written Communication</option>
-		</select>
-		<button type="reset" id="reset">Reset</button>
-		<button type="button" id="copyButton" data-clipboard-target="#urlAnchor">Copy URL to Clipboard</button>
-	</form>
-	<div id="URLResult">
-		<a id="urlAnchor"><p id="urlText"></p></a>
-	</div>
-</wrapper>
+    <header>
+        <img src="images/boulder-one-line.png">
+    </header>
+    <wrapper>
+        
+        <form id="urloptions">
+           <h1>Class Search URL Generator</h1>
+            <!--	Add select elements here if you want to add another criteria.  The ID attribute of the select box should be the search key, as the JS script will use the ID to build the key-value pairs.  -->
+            <select id="camp">
+                <option value="">Any Campus</option>
+                <option value="BLDR">Boulder Main Campus</option>
+                <option value="CEPS">Boulder Continuing Education</option>
+            </select>
+            <select id="srcdb">
+                    <option value="">Any Term</option>
+                    <option value="2181">Spring 2018</option>
+                    <option value="2177">Fall 2017</option>
+                    <option value="2184">Summer 2018 (Cart available March 2018)</option>
+                    <option value="9999">Full 2017-2018</option>
+                </select>
+            <select id='subject'>
+                <option value="">Any Subject</option>
+                <option value="ATLS">ATLAS (ATLS)</option>
+                <option value="ACCT">Accounting (ACCT)</option>
+                <option value="APRD">Advertising, PR, Media Design (APRD)</option>
+                <option value="ASEN">Aerospace Engineering (ASEN)</option>
+                <option value="AIRR">Air Force Aerospace Studies (AIRR)</option>
+                <option value="ANTH">Anthropology (ANTH)</option>
+                <option value="APPM">Applied Math (APPM)</option>
+                <option value="ARAB">Arabic (ARAB)</option>
+                <option value="AREN">Architectural Engineering (AREN)</option>
+                <option value="ARCH">Architecture (ARCH)</option>
+                <option value="ARTF">Art Film Studies (ARTF)</option>
+                <option value="ARTH">Art History (ARTH)</option>
+                <option value="ARTS">Art Studio and Non-Studio (ARTS)</option>
+                <option value="ARSC">Arts &amp; Sciences Courses (ARSC)</option>
+                <option value="ASIA">Asian Studies (ASIA)</option>
+                <option value="ASTR">Astrophysical &amp; Planetary Sci (ASTR)</option>
+                <option value="ATOC">Atmospheric &amp; Oceanic Sciences (ATOC)</option>
+                <option value="BASE">BCOR Applied Semester Exper (BASE)</option>
+                <option value="BAKR">Baker Residential Acad Prgm (BAKR)</option>
+                <option value="BMEN">Biomedical Engineering (BMEN)</option>
+                <option value="BADM">Business Administration (BADM)</option>
+                <option value="BCOR">Business Core (BCOR)</option>
+                <option value="BPOL">Business Environment &amp; Policy (BPOL)</option>
+                <option value="BSLW">Business Law (BSLW)</option>
+                <option value="BUSM">Business Minor (BUSM)</option>
+                <option value="CSVC">Career Services (CSVC)</option>
+                <option value="CWCV">Center for Western Civilizatio (CWCV)</option>
+                <option value="CAMW">Center of the American West (CAMW)</option>
+                <option value="CEES">Central &amp; East European Stdy (CEES)</option>
+                <option value="CHEN">Chemical Engineering (CHEN)</option>
+                <option value="CHEM">Chemistry (CHEM)</option>
+                <option value="CHIN">Chinese (CHIN)</option>
+                <option value="CVEN">Civil Engineering (CVEN)</option>
+                <option value="GREK">Classical Greek Language (GREK)</option>
+                <option value="CLAS">Classics (CLAS)</option>
+                <option value="COEN">Coll of Engineerng&amp;App Sci Adm (COEN)</option>
+                <option value="CMCI">Coll of Media,Commncation,Info (CMCI)</option>
+                <option value="COMM">Communication (COMM)</option>
+                <option value="COMR">Communication Res Acad Prgm (COMR)</option>
+                <option value="COML">Comparative Literature (COML)</option>
+                <option value="CSCI">Computer Science (CSCI)</option>
+                <option value="CNCR">Concurrent Placeholder (CNCR)</option>
+                <option value="CMDP">Critical Media Practices (CMDP)</option>
+                <option value="CESR">Curr Emphasis in Soc Respnsbly (CESR)</option>
+                <option value="DNCE">Dance (DNCE)</option>
+                <option value="DANE">Danish (DANE)</option>
+                <option value="EALC">East Asian Langs &amp; Civilzatns (EALC)</option>
+                <option value="EBIO">Ecology &amp; Evolutionary Biology (EBIO)</option>
+                <option value="ECON">Economics (ECON)</option>
+                <option value="EDUC">Education (EDUC)</option>
+                <option value="ECEN">Electrical &amp; Computer Engr (ECEN)</option>
+                <option value="ENEN">Energy Engineering (ENEN)</option>
+                <option value="EHON">Engineering Honors (EHON)</option>
+                <option value="EMEN">Engineering Management (EMEN)</option>
+                <option value="ENGL">English (ENGL)</option>
+                <option value="ESLG">English as a Second Language (ESLG)</option>
+                <option value="EDEN">Engr for Developng Communities (EDEN)</option>
+                <option value="ESBM">Entrepren &amp; Small Bus Mgmt (ESBM)</option>
+                <option value="ENST">Environment and Sustainability (ENST)</option>
+                <option value="ENVD">Environmental Design (ENVD)</option>
+                <option value="EVEN">Environmental Engineering (EVEN)</option>
+                <option value="ENVS">Environmental Studies (ENVS)</option>
+                <option value="ETHN">Ethnic Studies (ETHN)</option>
+                <option value="TDXD">Experience Design (TDXD)</option>
+                <option value="FARR">Farrand Residential Acad Prgm (FARR)</option>
+                <option value="FRSI">Farsi (FRSI)</option>
+                <option value="FILM">Film Studies (FILM)</option>
+                <option value="FNCE">Finance (FNCE)</option>
+                <option value="FINN">Finnish (FINN)</option>
+                <option value="FYSM">First Year Seminar (FYSM)</option>
+                <option value="FREN">French (FREN)</option>
+                <option value="GEEN">General Engineering (GEEN)</option>
+                <option value="GEOG">Geography (GEOG)</option>
+                <option value="GEOL">Geological Sciences (GEOL)</option>
+                <option value="GRMN">German (GRMN)</option>
+                <option value="GSLL">Germanic &amp; Slavic Lang &amp; Lit (GSLL)</option>
+                <option value="GRTE">Graduate Teacher Education (GRTE)</option>
+                <option value="HEBR">Hebrew (HEBR)</option>
+                <option value="HIND">Hindi/Urdu (HIND)</option>
+                <option value="HIST">History (HIST)</option>
+                <option value="HONR">Honors (HONR)</option>
+                <option value="HUMN">Humanities (HUMN)</option>
+                <option value="HUEN">Humanities for Engineers (HUEN)</option>
+                <option value="INVS">INVST Community Studies (INVS)</option>
+                <option value="INFO">Information Science (INFO)</option>
+                <option value="IPHY">Integrative Physiology (IPHY)</option>
+                <option value="IAFS">International Affairs (IAFS)</option>
+                <option value="INBU">International Business Cert (INBU)</option>
+                <option value="IAWP">Intrmedia Art,Wrtg,Performance (IAWP)</option>
+                <option value="ITAL">Italian (ITAL)</option>
+                <option value="JPNS">Japanese (JPNS)</option>
+                <option value="JWST">Jewish Studies (JWST)</option>
+                <option value="JRNL">Journalism (JRNL)</option>
+                <option value="KREN">Korean (KREN)</option>
+                <option value="LGTC">Language Technology (LGTC)</option>
+                <option value="LATN">Latin Language (LATN)</option>
+                <option value="LAWS">Law School (LAWS)</option>
+                <option value="LEAD">Leadership Minor (LEAD)</option>
+                <option value="LDSP">Leadership Res Acad Prgrm (LDSP)</option>
+                <option value="LGBT">Lesbn/Gay/Bisexual Stdys (LGBT)</option>
+                <option value="LIBB">Libby Residential Acad Prgm (LIBB)</option>
+                <option value="LIBR">Libraries (LIBR)</option>
+                <option value="LING">Linguistics (LING)</option>
+                <option value="MBAX">MBA Advanced Electives (MBAX)</option>
+                <option value="MBAC">MBA Core (MBAC)</option>
+                <option value="MSBC">MS Business Core (MSBC)</option>
+                <option value="MSBX">MS Business Electives (MSBX)</option>
+                <option value="MGMT">Management (MGMT)</option>
+                <option value="MKTG">Marketing (MKTG)</option>
+                <option value="ENVM">Master of the Environment (ENVM)</option>
+                <option value="MSEN">Materials Science&amp;Engineering (MSEN)</option>
+                <option value="MATH">Mathematics (MATH)</option>
+                <option value="MCEN">Mechanical Engineering (MCEN)</option>
+                <option value="MDRP">Media Research and Practice (MDRP)</option>
+                <option value="MDST">Media Studies (MDST)</option>
+                <option value="MEMS">Medieval &amp; Early Modern Stdys (MEMS)</option>
+                <option value="MILR">Military Science (MILR)</option>
+                <option value="MCDB">Molecular Cell &amp; Dev Biology (MCDB)</option>
+                <option value="MUSM">Museum (MUSM)</option>
+                <option value="MUSC">Music (MUSC)</option>
+                <option value="MUEL">Music Electives (MUEL)</option>
+                <option value="EMUS">Music Ensemble (EMUS)</option>
+                <option value="NAVR">Naval Science (NAVR)</option>
+                <option value="NRSC">Neuroscience (NRSC)</option>
+                <option value="NCBE">Non-credit Business Education (NCBE)</option>
+                <option value="NCEN">Non-credit Engineering (NCEN)</option>
+                <option value="NCIE">Non-credit Internat'l English (NCIE)</option>
+                <option value="NRLN">Norlin Scholars (NRLN)</option>
+                <option value="OPIM">Operations &amp; Information MGMT (OPIM)</option>
+                <option value="ORMG">Organization Management (ORMG)</option>
+                <option value="ORGL">Organizational Leadership (ORGL)</option>
+                <option value="PACS">Peace &amp; Conflict Studies (PACS)</option>
+                <option value="PMUS">Performance Music (PMUS)</option>
+                <option value="PHIL">Philosophy (PHIL)</option>
+                <option value="PHYS">Physics (PHYS)</option>
+                <option value="PSCI">Political Science (PSCI)</option>
+                <option value="PORT">Portuguese (PORT)</option>
+                <option value="PRLC">Presidents Leadership Class (PRLC)</option>
+                <option value="PSYC">Psychology (PSYC)</option>
+                <option value="REAL">Real Estate (REAL)</option>
+                <option value="RCPR">Reciprocal Exchange (RCPR)</option>
+                <option value="RLST">Religious Studies (RLST)</option>
+                <option value="RUSS">Russian (RUSS)</option>
+                <option value="SNSK">Sanskrit (SNSK)</option>
+                <option value="SCAN">Scandinavian (SCAN)</option>
+                <option value="SEWL">Sewall Residential Acad Prgm (SEWL)</option>
+                <option value="SOCY">Sociology (SOCY)</option>
+                <option value="SPAN">Spanish (SPAN)</option>
+                <option value="SLHS">Speech, Language &amp; Hearing Sci (SLHS)</option>
+                <option value="STDY">Study Abroad (STDY)</option>
+                <option value="SUST">Sustainability by Design RAP (SUST)</option>
+                <option value="SSIR">Sustainablty&amp;Soc Innovtn  RAP (SSIR)</option>
+                <option value="SWED">Swedish (SWED)</option>
+                <option value="TLEN">Telecommunications (TLEN)</option>
+                <option value="THTR">Theatre (THTR)</option>
+                <option value="TMUS">Thesis Music (TMUS)</option>
+                <option value="WGST">Women and Gender Studies (WGST)</option>
+                <option value="WRTG">Writing and Rhetoric (WRTG)</option>
+            </select>
+            <select id="career">
+                <option value="">Any Career</option>
+                <option value="GRAD">Graduate</option>
+                <option value="LAW">Law</option>
+                <option value="NOCR">Non-Credit</option>
+                <option value="UGRD">Undergraduate</option>
+            </select>
+            <select id="arsc">
+                <option value="">A&amp;S Core Attribute</option>
+                <option value="arsc_AS">A&amp;S Core&#58; Contemporary Societies</option>
+                <option value="arsc_AF">A&amp;S Core&#58; Foreign Language</option>
+                <option value="arsc_AH">A&amp;S Core&#58; Historical Context</option>
+                <option value="arsc_AD">A&amp;S Core&#58; Human Diversity</option>
+                <option value="arsc_AI">A&amp;S Core&#58; Ideals & Values</option>
+                <option value="arsc_AL">A&amp;S Core&#58; Literature and the Arts</option>
+                <option value="arsc_AX">A&amp;S Core&#58; Natural Science Sequence</option>
+                <option value="arsc_AY">A&amp;S Core&#58; Natural Sci Non-Sequence</option>
+                <option value="arsc_AZ">A&amp;S Core&#58; Natural Science Lab</option>             
+                <option value="arsc_AQ">A&amp;S Core&#58; Quantitative Reasoning</option>
+                <option value="arsc_AU">A&amp;S Core&#58; United States Context</option>
+                <option value="arsc_AW">A&amp;S Core&#58; Written Communication</option>
+            </select>
+            <select id="instmode">
+                <option value="">Any Instruction Mode</option>
+                <option value="CD">Candidate for Degree</option>
+                <option value="HN">Honors Thesis Course</option>
+                <option value="HY">Hybrid Online Classroom</option>
+                <option value="IS">Independent Study</option>
+                <option value="OL">Online</option>
+                <option value="OS">Online Self-Paced</option>
+                <option value="P">In Person</option>		    
+            </select>
+            <select name="" id="session">
+                <option value="">Any Session</option>
+                <option value="B51">Boulder Campus 5-Wk Session 1</option>
+                <option value="B52">Boulder Campus 5-Wk Session 2</option>
+                <option value="B53">Boulder Campus 5-Wk Session 3</option>
+                <option value="B81">Boulder Campus 8-Wk Session 1</option>
+                <option value="B82">Boulder Campus 8-Wk Session 2</option>
+                <option value="BPS">Boulder Campus Pre-Semester</option>
+                <option value="BVS">Boulder Campus Variable Sess</option>
+                <option value="B">Boulder Main Campus Semester</option>
+                <option value="BAS">Boulder Sum A Session/1st 5Wks</option>
+                <option value="BGS">Boulder Sum Augmester/3 Wks</option>
+                <option value="BBS">Boulder Sum B Session/2nd 5Wks</option>
+                <option value="BCS">Boulder Sum C Session/8 Wks</option>
+                <option value="BD2">Boulder Sum D (w/B D/A Dates)</option>
+                <option value="BD1">Boulder Sum D Session/10 Wks</option>
+                <option value="BES">Boulder Sum E Session/1st 5Wks</option>
+                <option value="BFS">Boulder Sum F Session/2nd 5Wks</option>
+                <option value="BAM">Boulder Sum Maymester/3 Weeks</option>
+                <option value="BWS">Boulder Winter Session</option>
+                <option value="BET">CE Evening 10 Weeks</option>
+                <option value="BEF">CE Evening Full Session</option>
+    <!--                <option value="BE1">CE Evening Session 1</option>-->
+    <!--                <option value="BE2">CE Evening Session 2</option>-->
+    <!--                <option value="BG1">CE Grad 1st 7 weeks</option>-->
+    <!--                <option value="BG2">CE Grad 2nd 7 weeks</option>-->
+                <option value="BSO">CE Online Self Paced</option>
+                <option value="BL4">CE Online TermBased 10 Weeks</option>
+                <option value="BL3">CE Online TermBased Full Sess</option>
+                <option value="BL1">CE Online TermBased Sess 1</option>
+                <option value="BL2">CE Online TermBased Sess 2</option>
+                <option value="BL5">CE Online TrmBsd Sum 8 Weeks</option>
+                <option value="BCE">Cont Ed Extraordinary</option>
+                <option value="BIT">Cont Ed IEC ESL Credit 10 Week</option>
+                <option value="BM9">Cont Ed-Applied Music</option>
+                <option value="BI1">Cont Ed-Intern'l Engl Session1</option>
+            </select>
+            <button type="reset" id="reset">Reset</button>
+            <button type="button" id="copyButton" data-clipboard-target="#urlAnchor">Copy URL to Clipboard</button>
+                    <div id="URLResult">
+            <a id="urlAnchor">
+                <p id="urlText"></p>
+            </a>
+        </div>
+        </form>
+
+    </wrapper>
 </body>
 <script type="text/javascript" src="scripts/script.js"></script>
-</html>
 
+</html>
